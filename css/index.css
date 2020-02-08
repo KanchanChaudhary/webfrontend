@@ -1,0 +1,48 @@
+.nav-bar-main-container {
+    /* border: 5px solid black; */
+    background: rgba(175, 175, 175, 0.5);
+    color: white;
+    font-family: Cambria;
+    width: 100%;
+    float: left;
+    position: fixed;
+    padding-top: 5px;
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.background-image img {
+    width: 100%;
+}
+
+.nav-bar-items {
+    margin-left: 50%;
+}
+
+.navbar-toggler-icon {
+    color: white;
+}
+
+#btn_open_login, #btn_open_signup {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item {
+    font-size: 20px;
+}
+
+#nav-bar-logo {
+    font-size: 35px;
+}
+
+.background-image {
+    background-image: url('../images/indexbackground.jpg');
+    height: 1080px;
+    width: 100%;
+    /* height: auto; */
+    overflow: hidden;
+}
