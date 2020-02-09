@@ -16,13 +16,11 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
-
-
-
-    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/feedbacksingle.css">
 
 
 </head>
@@ -69,72 +67,69 @@
 
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>News</a></h4>
+                                    <h4 class="panel-title"><a href="news.html">News</a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>Gallery</a></h4>
+                                    <h4 class="panel-title"><a href="gallery.html">Gallery</a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>Feedback</a></h4>
+                                    <h4 class="panel-title"><a href="rules.html">Rules</a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>Comment</a></h4>
+                                    <h4 class="panel-title"><a href="feedback.html">Feedback</a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>Events</a></h4>
+                                    <h4 class="panel-title"><a href="events.html">Events</a></h4>
                                 </div>
                             </div>
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <h4 class="panel-title"><a>Contact</a></h4>
+                                    <h4 class="panel-title"><a href="contact.html">Contact</a></h4>
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
 
                 <div class="col-sm-9 padding-right mt-5">
-                    <div class="row">
+                    <div id="feedback-container">
+                        <di id="feedback-heading" class="col-sm-12 p-5 text-left">
+                            <h3> Heading </h3>
+                        </di>
+                        <div id="feedback-content" class="col-sm-12 p-5">
+                            <h4 class="text-left">This is feedback </h4>
+                            </di>
+
+                            <p> <i class="fa fa-comments"></i> </p>
+
+                            <p>
+                                <div class="feedback-input com-sm-12">
+                                    <input type="text" class="col-sm-11" placeholder="Write Something" id="txt-feedback">
+                                    <button class="col-sm-1" id="btn-post-comment"> <i class="fa fa-send"></i> </button>
+                                </div>
+                            </p>
+
+                            <div class="comment-section col-sm-12" id="comments-container">
 
 
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <img src="../images/voting1.jpg" class="img-responsive img-thumbnail" height="200px" width="200px">
+                                <div class="comments-content">
+                                    <div class="commenter-name col-sm-1"> Sabin </div>
+                                    <div class="comment col-sm-10">This is comment</div>
+                                </div>
+                            </div>
                         </div>
-
-                        
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <img src="../images/voting2.jpeg" class="img-responsive img-thumbnail" height="200px" width="200px">
-                        </div>
-
-                        
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <img src="../images/voting3.jpg" class="img-responsive img-thumbnail" height="200px" width="200px">
-                        </div>
-
-                        
-                        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                            <img src="../images/voting4.jpg" class="img-responsive img-thumbnail" height="200px" width="200px">
-                        </div>
-                       
-
                     </div>
 
-
                 </div>
-
             </div>
-        </div>
         </div>
     </section>
 
@@ -153,6 +148,7 @@
         </div>
     </footer>
     <!--/Footer-->
+
 
 
 

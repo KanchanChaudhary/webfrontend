@@ -1,0 +1,11 @@
+#feedback-heading{
+    background: rgb(223, 223, 223);
+    border: 1px solid rgb(224, 224, 224);
+}
+#feedback-content{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 0.5px solid rgb(207, 207, 207);
+    border-top: none;
+    box-shadow: 5px 5px 5px rgb(167, 167, 167);
+}
