@@ -1,0 +1,11 @@
+.nav-bar-container{
+  text-align: center;
+  border: 1px solid black;
+}
+
+.site-logo{
+    float: left;
+}
+.nav-bar-items a{
+    color: black;
+}
