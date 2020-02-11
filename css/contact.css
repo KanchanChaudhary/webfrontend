@@ -1,0 +1,42 @@
+body {
+    background: rgb(2, 0, 36);
+    /* background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 53, 0.9136029411764706) 35%, rgba(255, 0, 86, 1) 100%); */
+    background: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    font-family: Cambria;
+}
+
+html {
+    height: 100%;
+}
+
+.contact-container {
+    background-color: white;
+    border-radius: 25px;
+    height: 100%;
+}
+
+input[type="text"], textarea {
+    /* border: 1px solid black; */
+    border: none;
+    border-radius: 25px;
+    padding: 10px;
+    margin: 20px;
+    outline: none;
+    background-color: rgb(228, 228, 228);
+}
+
+#validate-email, #validate-name, #validate-phone, #validate-message, #validate-cmessage, #validate-message {
+    color: red;
+    font-style: italic;
+}
+
+#contact-validation {
+    display: none;
+}
+
+#btn-contact {
+    border-radius: 25px;
+    margin: 25px;
+    padding: 10px;
+}

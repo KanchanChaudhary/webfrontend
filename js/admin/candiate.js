@@ -8,7 +8,7 @@ $(document).ready(function () {
                 candiateData[index].partyname,
                 candiateData[index].candiatenname,
                 '<img src="http://localhost:8080/asset/uploads/images/candiate/' + candiateData[index].image + '" class="img-thumbnail img-responsive" width="100px" height="100px">',
-                '<button id="btn-delete-candiate"  class="btn btn-danger" candiate_id="' + candiateData[index]._id + '"> <i class="fa fa-trash"> </i> </button>'
+                '<button id="btn-delete-candiate"  class="btn btn-danger"  candiate_id="' + candiateData[index]._id + '"> <i class="fa fa-trash"> </i> </button>'
             ]).draw(false)
         })
     })
@@ -24,13 +24,68 @@ $(document).ready(function () {
     })
 
 
+    $.getJSON('http://localhost:8080/candiate', function (data) {
+        let candiateTable = $('#votestable').DataTable();
+        let candiateData = data.data;
+        $.each(candiateData, function (index) {
+            candiateTable.row.add([
+                candiateData[index].partyname,
+                candiateData[index].candiatenname,
+                '<img src="http://localhost:8080/asset/uploads/images/candiate/' + candiateData[index].image + '" class="img-thumbnail img-responsive" width="100px" height="100px">',
+                '<button id="btn-vote"  class="btn btn-success"' +
+                'candiate_name="' + candiateData[index].candiatenname + '"' +
+                'party_name="' + candiateData[index].partyname + '"' +
+                'image="' + candiateData[index].image + '"' +
+                'candiate_id="' + candiateData[index]._id + '"> <i class="fa fa-send"> </i> </button>'
+            ]).draw(false)
+        })
+    })
+
+
+    $('#candiate-votes-body').on('click', '#btn-vote', function () {
+        let partyname = $(this).attr('party_name');
+        let candiatename = $(this).attr('candiate_name');
+        let candiateid = $(this).attr('candiate_id');
+        let image = $(this).attr('image');
+        let userid = localStorage.getItem('userid');
+        let username = localStorage.getItem('username');
+        let useremail = localStorage.getItem('useremail');
+
+
+        $.ajax({
+            url: 'http://localhost:8080/vote',
+            type: 'POST',
+            data: {
+                'partyname': partyname,
+                'candiatename': candiatename,
+                'candiateid': candiateid,
+                'userid': userid,
+                'username': username,
+                'useremail': useremail,
+                'image': image
+            },
+            success: function (data) {
+                if (data.added) {
+                    alert(data.message)
+                }
+
+                else if (!data.added) {
+                    alert(data.message)
+                }
+            }
+        })
+    })
+
+
+
+
 
 
     $('#btn-add-candiate').click(function () {
         let partyname = $('#txt-party-name').val();
         let candiatename = $('#txt-candiate-name').val();
         let image = $('#image');
-        
+
 
         if (partyname === '') {
             alert('Enter party  name')

@@ -20,10 +20,8 @@
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
-    <link rel="stylesheet" href="../css/feedback.css">
-
-    <script src="../js/feedback.js"></script>
-
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="../js/contact.js"></script>
 
 </head>
 
@@ -44,8 +42,8 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
-                                <li> <a href="voting.html"> <i class="fa fa-users"></i> Vote </a> </li>
-                                <li><a href="login.html"><i class="fa fa-power-off"></i> Logout</a></li>
+                                <li> <a href=""> <i class="fa fa-users"></i> Vote </a> </li>
+                                <li><a><i class="fa fa-power-off"></i> Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,13 +100,32 @@
                 </div>
 
                 <div class="col-sm-9 padding-right mt-5">
-                    <div id="feedback-container">
-                       
+                    <div class="row m-0" class="main-container">
+                        <div class="col-sm"></div>
+                        <div class="col-sm text-center">
+                            <div class="contact-container mt-5 p-2">
+                                <p>
+                                    <h3> <i class="fa fa-share"></i> contact </h3>
+                                </p>
 
+                                <p> <input id="txt-name" class="col-sm-12 mt-5" type="text" placeholder="Fullname"> </p>
+                                <p><span id="validate-name"></span></p>
+                                <p> <input id="txt-email" type="text" class="col-sm-12 mt-5" placeholder="Email"> </p>
+                                <p><span id="validate-email"></span></p>
+                                <p> <input id="txt-phone" type="text" class="col-sm-12 mt-5" placeholder="Phone"> </p>
+                                <p><span id="validate-phone"></span></p>
+                                <p> <textarea placeholder="Your message" id="txt-message" class="col-sm-12 mt-5"></textarea> </p>
+                                <p><span id="validate-message"></span></p>
+                                <p><button id="btn-contact" class="btn btn-success pl-5 pr-5 col-sm-12">contact</button></p>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="col-sm"></div>
                     </div>
-
                 </div>
+
             </div>
+        </div>
         </div>
     </section>
 

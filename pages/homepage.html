@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
 
-
+	<script src="../js/admin/voting.js"></script>
 
 </head>
 
@@ -42,8 +42,8 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li> <a href=""> <i class="fa fa-users"></i> Vote </a> </li>
-								<li><a><i class="fa fa-power-off"></i> Logout</a></li>
+								<li> <a href="voting.html"> <i class="fa fa-users"></i> Vote </a> </li>
+								<li href="login.html"><a><i class="fa fa-power-off"></i> Logout</a></li>
 							</ul>
 						</div>
 					</div>
@@ -102,7 +102,7 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items">
 						<!--features_items-->
-						<h2 class="title text-center">Homepage</h2>
+						<h2 class="title text-center">Total votes</h2>
 						<div id="">
 							<div id="">
 								<section id="main-content">
@@ -113,16 +113,12 @@
 													<th>Party name</th>
 													<th> Candidate name </th>
 													<th>Candidate image</th>
-													<th>No of votes</th>
+													<th>Voter name</th>
+													<th>Voter email</th>
 												</tr>
 											</thead>
 											<tbody id="candiate-votes-body">
-												<tr>
-													<td>Party name</td>
-													<td> Candidate name </td>
-													<td>Candidate image</td>
-													<td>No of votes</td>
-												</tr>
+												
 											</tbody>
 
 										</table>
