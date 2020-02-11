@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
     <link rel="stylesheet" href="../css/feedbacksingle.css">
-
+    <script src="../js/feedbacksingle.js"></script>
 
 </head>
 
@@ -112,19 +112,16 @@
 
                             <p>
                                 <div class="feedback-input com-sm-12">
-                                    <input type="text" class="col-sm-11" placeholder="Write Something" id="txt-feedback">
+                                    <input type="text" class="col-sm-11" placeholder="Write Something"
+                                        id="txt-feedback">
                                     <button class="col-sm-1" id="btn-post-comment"> <i class="fa fa-send"></i> </button>
                                 </div>
                             </p>
 
-                            <div class="comment-section col-sm-12" id="comments-container">
-
-
-                                <div class="comments-content">
-                                    <div class="commenter-name col-sm-1"> Sabin </div>
-                                    <div class="comment col-sm-10">This is comment</div>
-                                </div>
+                            <div id="comments-box">
+                                
                             </div>
+                           
                         </div>
                     </div>
 
